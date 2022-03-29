@@ -32,3 +32,23 @@ alert('My name is '+lastName+'. I am '+age+' years old. And am I ok? '+isOk+'.')
 // Get user input
 height = prompt('What is your height?');
 alert('My height is '+height+' feet.');
+
+// comparison operators : >= > <== < == === !== !== 
+var a = 20;
+var b = '20';
+var c = 5;
+var d = 15;
+
+if (a == b) {
+    console.log("Only values are equal");
+    if (a === b){
+        console.log("Both values are types are equal");
+    }else if (a !== b) {
+        console.log("Only values or types are equal");
+    }
+}
+
+// Ternary operator : condition ? <expression if true> : <expression if false>
+c <= 5 ? console.log("c is less than or equal to 5") : console.log("c is greater than to 5");
+
+// logical operators : && || >> << !

@@ -27,3 +27,17 @@ formTitle.innerHTML = "<i>Hello</i> Add Items";
 console.log(formTitle.innerHTML);
 formTitle.textContent = "Add Items";
 console.log(formTitle.textContent);
+
+// styling
+var navBar = document.getElementById('navbar');
+navBar.style.backgroundColor = "orange";
+
+// Select element using class name
+var items = document.getElementsByClassName('items');
+console.log(items);
+items[2].style.backgroundColor = "red";
+for (const i of items) {
+    i.style.backgroundColor = "white";
+}
+
+// select element using tag name

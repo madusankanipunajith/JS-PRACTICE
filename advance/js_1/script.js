@@ -88,3 +88,21 @@ for (const i of even) {
     i.style.border = '1px solid green';
 }
 
+// parentNode, parentElement
+var ul = document.querySelector('ul');
+console.log(ul.parentElement);
+
+// childNode, children
+console.log(ul.children);
+
+// firstChild, firstElementChild
+console.log(ul.firstElementChild);
+
+// lastChild, lastElementChild
+console.log(ul.lastElementChild);
+
+// nextSibling, nextElementSibling
+console.log(ul.nextElementSibling);
+
+// previousSibling, previousElementSibling
+console.log(ul.previousElementSibling);

@@ -28,7 +28,7 @@ console.log(formTitle.innerHTML);
 formTitle.textContent = "Add Items";
 console.log(formTitle.textContent);
 
-// styling
+// select element using ID & styling
 var navBar = document.getElementById('navbar');
 navBar.style.backgroundColor = "orange";
 
@@ -41,3 +41,27 @@ for (const i of items) {
 }
 
 // select element using tag name
+var input = document.getElementsByTagName('input');
+console.log(input);
+input[0].style.backgroundColor = "red";
+input[0].style.backgroundColor = "white";
+
+// usage of querySelector
+var navBar = document.querySelector('#navbar'); // ID
+navBar.style.backgroundColor = 'yellow';
+navBar.style.border = '3px 3px black';
+
+var items = document.querySelector('.items'); // class
+console.log(items);
+
+var input = document.querySelector('input'); // Tag
+input.style.backgroundColor = "orange";
+input.style.backgroundColor = "white";
+input.value = "Hello world";
+
+var formText = document.querySelector('.container .frm #frmt');
+console.log(formText);
+formText.style.border = "1px solid black";
+formText.style.padding = "12px";
+
+// usage of querySelectorAll

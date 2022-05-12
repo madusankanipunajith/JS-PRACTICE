@@ -39,6 +39,7 @@
         }
         .container button{
             padding: 7px 20px;
+            margin: 0px 5px;
             border: none;
             background-color: #ebca14;
             cursor: pointer;
@@ -53,6 +54,12 @@
             border: 1px solid black;
             border-radius: 10px;
             margin-bottom: 2px;
+        }
+        .container .btn{
+            margin: 0px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
@@ -86,9 +93,15 @@
                 <li class="items">Item 5</li>
             </ul>
         </div>
+        <div class="btn">
+            <button class="c-btn">Click Here...</button>
+            <button class="i-btn">Change Value...</button>
+            <button id = "abc" class="e-btn sample">Sample Button</button>
+        </div>
     </div>
 
     <!--External JS-->
     <script src="./script.js"></script>
+    <script src="./events.js"></script>
 </body>
 </html>

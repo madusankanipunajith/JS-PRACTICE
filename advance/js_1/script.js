@@ -65,3 +65,26 @@ formText.style.border = "1px solid black";
 formText.style.padding = "12px";
 
 // usage of querySelectorAll
+var hd = document.querySelectorAll('#hdt');
+var dv = document.querySelectorAll('div');
+var mx = document.querySelectorAll('.items');
+var li = document.querySelectorAll('.list li');
+console.log(hd);
+console.log(dv);
+console.log(mx);
+console.log(li);
+
+//Pseudo classes
+var odd = document.querySelectorAll('li:nth-child(odd)');
+var even = document.querySelectorAll('li:nth-child(even)');
+console.log(odd);
+console.log(even);
+
+for (const i of odd) {
+    i.style.border = '1px solid brown';
+}
+
+for (const i of even) {
+    i.style.border = '1px solid green';
+}
+

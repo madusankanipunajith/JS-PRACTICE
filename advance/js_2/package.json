@@ -1,0 +1,15 @@
+{
+  "name": "js_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "callback.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-fetch": "^3.1.5",
+    "node-fetch": "^3.2.6"
+  }
+}

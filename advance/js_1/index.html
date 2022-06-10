@@ -61,6 +61,17 @@
             align-items: center;
             justify-content: center;
         }
+        #myDiv1, #myDiv2{
+            padding: 50px;
+            border: 1px solid black;
+            margin: 5px auto;
+            background-color: orange;
+            max-width: 400px;
+        }
+        #myP1, #myP2{
+            padding: 10px;
+            background-color: white;
+        }
     </style>
 </head>
 <body>
@@ -97,6 +108,14 @@
             <button class="c-btn">Click Here...</button>
             <button class="i-btn">Change Value...</button>
             <button id = "abc" class="e-btn sample">Sample Button</button>
+        </div>
+
+        <!--Bubbling & Capturing-->
+        <div id="myDiv1">
+            <p id="myP1">Click me 1 (Bubbling)</p>
+        </div>
+        <div id="myDiv2">
+            <p id="myP2">Click me 2 (Capturing)</p>
         </div>
     </div>
 

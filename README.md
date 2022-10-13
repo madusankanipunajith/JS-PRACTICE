@@ -265,6 +265,7 @@ for(var i in myObj){
 }
 ```
 ## Functions in JS
+Let's discuss about regular functions
 ```js
 function calcAge(age){
     console.log('Age is '+age);
@@ -287,4 +288,61 @@ calcAge(25); // calling the function
 console.log(getName());
 calcWidth(myFunc);
 ```
+Let's discuss about callback functions
+When it comes to the Js, callbacks functions are very useful and important. Basically, it is an implementation of a function inside another function. you can get an idea by looking at following examples.
+```js
+console.log('init');
+const doSomething = (number, callback) =>{
+    console.log('Internal process of the function '+number);
+    callback(); // after doing the internal process callback function will be executed
+}
+doSomething(12, ()=>{
+    console.log('callback function executes');
+});
+```
+Let's see another example
+```js
+console.log('init');
 
+function doSomething(number, success, error){
+    console.log('interal process of do something...');
+    if(number % 2 == 0){
+        setTimeout(()=>{
+            console.log('Timed out');
+            success();
+        },2000);
+    }else{
+        error();
+    }
+}
+doSomething(12, function(){
+    console.log('success');
+}, function(){
+    console.log('error');
+});
+
+console.log('end');
+```
+Another version of above code section.
+```js
+console.log('init');
+
+function doSomething(number, success, error){
+    console.log('interal process of do something...');
+    if(number % 2 == 0){
+        setTimeout(success,2000);
+    }else{
+        setTimeout(error,2000);
+    }
+}
+doSomething(12, function(){
+    console.log('success');
+}, function(){
+    console.log('error');
+});
+
+console.log('end');
+```
+But there is some issue in this callback operation called callback-hell. to avoid this we have to use async await methods
+
+## Promises and async-await in JS

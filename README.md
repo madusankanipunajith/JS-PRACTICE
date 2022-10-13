@@ -4,12 +4,30 @@
 
 ### Varible data types in JS
 We can fine 6 types of variable data types in JS. They are,
-- number => var myVar = 123
-- string => var varName = 'Madusanka'
-- object => var varName = {}
-- boolean => var myVar = true
-- null => var myVar = null
-- undefined => var myVar;
+- number
+```
+var myVar = 123
+```
+- string
+```
+var varName = 'Madusanka'
+```
+- object
+```
+var varName = {}
+```
+- boolean
+```
+var myVar = true
+```
+- null
+```
+var myVar = null
+```
+- undefined
+```
+var myVar;
+```
 
 ```
 console.log(typeof varName);
@@ -77,7 +95,19 @@ There are mainly 3 types when it comes to the JS variable types. They are,
     console.log(item) // 0: 12, name: 'Madusanka', age: 21 
 ```
 
-
+## Operators
+- Arithmatic + - * % /
+- Incremental ++ --
+- Comparison == > <= >= < !=
+```
+let value = 2 + 3;
+let x = 2;
+console.log(value); // 5
+console.log(x++); // 5
+console.log(x); // 6
+console.log(x == value); // false
+console.log (x > value); // false
+```
 
 
 

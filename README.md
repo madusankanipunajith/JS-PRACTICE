@@ -59,7 +59,7 @@ console.log(name); // global
 init(); // local
 
 ```
-### Variable types of JS
+### Variable types in JS
 There are mainly 3 types when it comes to the JS variable types. They are,
 - let [with ES6] => same as var but can't use same variable name in the same scope. Also we can't initialize before define. 
 
@@ -95,7 +95,7 @@ There are mainly 3 types when it comes to the JS variable types. They are,
     console.log(item) // 0: 12, name: 'Madusanka', age: 21 
 ```
 
-## Operators
+## Operators in JS
 - Arithmatic + - * % /
 - Incremental ++ --
 - Comparison == > <= >= < !=
@@ -265,5 +265,26 @@ for(var i in myObj){
 }
 ```
 ## Functions in JS
+```js
+function calcAge(age){
+    console.log('Age is '+age);
+}
 
+function getName(){
+    return 'Madusanka';
+}
+
+// function as a parameter
+function calcWidth(func){
+    func(); 
+}
+
+function myFunc(){
+    console.log('This is my function');
+}
+
+calcAge(25); // calling the function
+console.log(getName());
+calcWidth(myFunc);
+```
 

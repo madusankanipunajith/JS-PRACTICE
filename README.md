@@ -133,7 +133,67 @@ output : OK
 let sample = (value && age) ? "X" : "C"; // condtion ? if true : else
 console.log(sample) // X
 ```
+## if-else && if-else if-else in JS
+```js
+let age = 22;
+// if statement considers as true if the passed value of variable is not an undefine,null or 0 value
+if (age > 25) {
+    console.log('Age is greater than 25');
+}else{
+    console.log('Age is less than or equal to 25');
+}
 
+let name = 'Madusanka';
+if (name) {
+    console.log('True');
+}else{
+    console.log('False');
+}
+```
+## switch in JS
+It is somewhat similar to the if else conditions but advance.
+**break** keyword is very imporatant here.
+you can use {} as well.
+```js
+let vehicle = 'car'; 
+switch(vehicle){
+    case 'car' :
+        console.log('car side'); // implementation
+        break;
+    case 'van':
+        console.log('van side');
+        break;
+    case 'ship':
+    case 'boat':
+        console.log('Multiple values'); // important part in switch case   
+        break;     
+    default:
+        console.log('default'); // since default keyword is in the last stage we don't need to add default keyword
+}
+
+// Implementation with blocks
+switch(vehicle){
+    case 'car' {
+        let name = 'Madusanka';
+        console.log('car side'+ name); // implementation
+        break;
+    }
+    case 'van':{
+        let name = 'Nipunajith';
+        console.log('van side'+ name);
+        break;
+    }
+    case 'ship':
+    case 'boat':{
+        console.log('Multiple values'); // important part in switch case   
+        break;  
+    }
+    
+    default:{
+        console.log('default'); // since default keyword is in the last stage we don't need to add default keyword
+    }
+}
+```
 
 
 

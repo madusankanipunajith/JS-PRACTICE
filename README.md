@@ -173,7 +173,7 @@ switch(vehicle){
 
 // Implementation with blocks
 switch(vehicle){
-    case 'car' {
+    case 'car': {
         let name = 'Madusanka';
         console.log('car side'+ name); // implementation
         break;
@@ -188,12 +188,82 @@ switch(vehicle){
         console.log('Multiple values'); // important part in switch case   
         break;  
     }
-    
+
     default:{
         console.log('default'); // since default keyword is in the last stage we don't need to add default keyword
     }
 }
 ```
+## Loops in JS
+- while loop
+- do while loop
+- for loop
+```js
+let i = 0;
+let arr = [1,2,3,5,6,7,8,9,0];
+// while loop
+while (i < 10) {
+    console.log(i);
+    i++; // i = i+1
+}
 
+while (i < arr.length){
+    console.log(arr[i]);
+    i++;
+}
+
+// do-while loop
+do {
+    console.log(i);
+    i++;
+}while(i < 10);
+
+// for loop
+for(let i=0; i < arr.length; i++){
+    console.log(arr[i]);
+}
+for(let i=0; i < arr.length; i+=2){
+    console.log(arr[i]);
+}
+for(let i=0; i < arr.length; i++){
+    if (i == 4){
+        break; // terminate the loop eventually while executing the loop.
+        // continue; 
+    }
+    console.log(arr[i]);
+}
+```
+Let's see how to handle nested loops using labels
+```js
+iloop:
+for(var i = 0; i < 10; i++){
+    console.log('Outer loop')
+    jloop:
+    for(var j=0; j < 10; j++){
+        if (i == 8){
+            break iloop;
+        }
+        if(j == 9){
+            break jloop;
+        }
+        if(i == 2){
+            continue iloop;
+        }
+    }
+}
+```
+Let's see how to handle object using loops
+```js
+let myObj = {
+    name : 'Madusanka',
+    age : 22,
+    address : 'Gampaha'
+};
+for(var i in myObj){
+    console.log(i); // name age address 
+    console.log(myObj[i]); // Madusanka 22 Gampaha
+}
+```
+## Functions in JS
 
 

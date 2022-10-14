@@ -415,5 +415,35 @@ execApi("X").then((response)=>{
     console.log(value);
 }).catch((error)=>{
     console.log(error);
+}).finally(()=>{
+    console.log('done');
 });
+```
+**Async-Await**
+By using async-await pair we can get the output outside from the promise. when you look at the above scenarios, we only have done is executing the output recieved inside the function. while you are using this async-await pair try-catch pair is also more important. if you want to handle reject capability you need to add try-catch pair as follows. 
+```js
+async function doSomething() {
+    try{
+        const value = await execApi("X");
+        console.log(value); // resolve 
+    }catch(error){
+        console.log(error); // reject
+    }
+}
+```
+**Imidiately Invoke Functions(IIF)**
+You can run the function imediately if you use IIF.
+```js
+(()=>{
+    console.log('IIF is executed');
+})();
+
+(async () =>{
+    try{
+        const value = await execApi("X");
+        console.log(value); // resolve 
+    }catch(error){
+        console.log(error); // reject
+    }
+})();
 ```

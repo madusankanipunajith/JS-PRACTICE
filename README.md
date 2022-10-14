@@ -364,6 +364,7 @@ doSomething(12, (result)=>{
 But there is some issue in this callback operation called callback-hell. to avoid this we have to use async await methods
 
 ## Promises and async-await in JS
+
 **promise**
 promises are used to handle future results. If we are waiting for a future result from an execution we can use promises. Furthermore, there are 2 main callback functions in the promise called resolve and reject. resolve callback is used to resolve the promise with a value or the result of the another promise. reject is used to reject the promise with a provided reason or error. resolve (success) and reject (error)
 promises has 3 states. They are pending, success, reject.
@@ -420,6 +421,7 @@ execApi("X").then((response)=>{
 });
 ```
 **Async-Await**
+
 By using async-await pair we can get the output outside from the promise. when you look at the above scenarios, we only have done is executing the output recieved inside the function. while you are using this async-await pair try-catch pair is also more important. if you want to handle reject capability you need to add try-catch pair as follows. 
 ```js
 async function doSomething() {
@@ -432,6 +434,7 @@ async function doSomething() {
 }
 ```
 **Imidiately Invoke Functions(IIF)**
+
 You can run the function imediately if you use IIF.
 ```js
 (()=>{

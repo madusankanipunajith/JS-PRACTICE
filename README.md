@@ -343,6 +343,77 @@ doSomething(12, function(){
 
 console.log('end');
 ```
+This is another interesting example using callbacks
+```js
+const doSomething = (number, success, error) =>{
+    if(number % 2 === 0){
+        setTimeout(()=>{
+          success("Madusanka Nipunajith");
+        },4000);
+    }else{
+      error("something went wrong");
+    }
+}
+
+doSomething(12, (result)=>{
+    console.log(result);
+},(error)=>{
+  console.log(error);
+})
+```
 But there is some issue in this callback operation called callback-hell. to avoid this we have to use async await methods
 
 ## Promises and async-await in JS
+**promise**
+promises are used to handle future results. If we are waiting for a future result from an execution we can use promises. Furthermore, there are 2 main callback functions in the promise called resolve and reject. resolve callback is used to resolve the promise with a value or the result of the another promise. reject is used to reject the promise with a provided reason or error. resolve (success) and reject (error)
+promises has 3 states. They are pending, success, reject.
+Please refer following example.
+```js
+const value = new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+        //exec
+        resolve("result"); // reject("something went wrong");
+    },4000);
+
+    value.then((response)=>{
+        console.log(respone);
+    }).catch((error)=>{
+        console.log(error);
+    }); 
+})
+```
+This is another advance example using promises
+```js
+const execApi = (data) => {
+    return new Promise((resolve, reject)=>{
+        if (data === "X"){
+            setTimeout(()=>{
+                reject("something went wrong");
+            },4000);
+        }else{
+            setTimeout(()=>{
+                resolve("This is a response");
+            },4000);
+        }
+    });
+}
+
+execApi("X").then((response)=>{
+    console.log(response);
+}).catch((error)=>{
+    console.log(error);
+});
+
+// chain of multiple then
+execApi("X").then((response)=>{
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            resolve("This is the 2nd response");
+        },4000);
+    })
+}).then((value)=>{
+    console.log(value);
+}).catch((error)=>{
+    console.log(error);
+});
+```

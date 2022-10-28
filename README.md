@@ -374,14 +374,14 @@ const value = new Promise((resolve, reject)=>{
     setTimeout(()=>{
         //exec
         resolve("result"); // reject("something went wrong");
-    },4000);
+    },4000); 
+})
 
-    value.then((response)=>{
+value.then((response)=>{
         console.log(respone);
     }).catch((error)=>{
         console.log(error);
-    }); 
-})
+});
 ```
 This is another advance example using promises
 ```js

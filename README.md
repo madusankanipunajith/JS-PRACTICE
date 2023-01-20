@@ -240,6 +240,7 @@ for(var i = 0; i < 10; i++){
     console.log('Outer loop')
     jloop:
     for(var j=0; j < 10; j++){
+        console.log('Inner loop')
         if (i == 8){
             break iloop;
         }
